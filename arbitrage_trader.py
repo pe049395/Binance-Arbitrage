@@ -8,7 +8,7 @@ from binance_client import client, margin_send_market_buy_order, margin_send_mar
 BTCUSDT_LISTEN_KEY = client.new_isolated_margin_listen_key("BTCUSDT")["listenKey"]
 BTCBUSD_LISTEN_KEY = client.new_isolated_margin_listen_key("BTCBUSD")["listenKey"]
 
-class Arbitrager:
+class Arbitrageur:
     def __init__(self):
         self.THRESHOLD = 1.2
         self.QTY = 0.001
