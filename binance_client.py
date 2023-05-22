@@ -15,7 +15,6 @@ def handle_trade_error(action, error):
     logging.error(error_text)
 
 def margin_send_market_buy_order(symbol, quantity):
-
     params = {
         "symbol": symbol,
         "side": "BUY",
