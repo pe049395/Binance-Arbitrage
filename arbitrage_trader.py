@@ -84,7 +84,7 @@ class Arbitrageur:
                         self.btcbusd_trade = self.btcbusd_bid
                         self.buying_btcusdt = True
                         self.selling_btcusdt = False
-                        self.last_traded_time = time.time()
+                        self.last_traded_time = now
 
                 elif selltime:
                     if now > self.last_traded_time + 10 or not self.selling_btcusdt:
