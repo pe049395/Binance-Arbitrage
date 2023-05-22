@@ -5,7 +5,7 @@ from typing import List
 from arbitrage_trader import Arbitrager, BTCUSDT_LISTEN_KEY, BTCBUSD_LISTEN_KEY
 
 
-class BinanceWebsocketConnector(Arbitrager):
+class BinanceWebsocketConnector(Arbitrageur):
     def __init__(self, symbols: List[str]):
         super().__init__()
 
