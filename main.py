@@ -35,7 +35,7 @@ class BinanceWebsocketConnector(Arbitrageur):
     def on_error(self, ws, message):
         print(f"WebSocket error: {message}")
 
-    def on_close(self, ws):
+    def on_close(self, ws, close_status_code, close_msg):
         print("WebSocket connection closed")
 
     def on_message(self, ws, message):
