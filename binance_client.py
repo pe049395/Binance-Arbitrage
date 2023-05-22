@@ -30,7 +30,6 @@ def margin_send_market_buy_order(symbol, quantity):
     except ClientError as error:
         handle_trade_error("Market Buy", error)
 
-
 def margin_send_market_sell_order(symbol, quantity):
     params = {
         "symbol": symbol,
