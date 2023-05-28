@@ -75,7 +75,7 @@ class Arbitrageur:
                 now = time.time()
 
                 if buytime:
-                    if now > self.last_traded_time + 10 or not self.buying_btcusdt:
+                    if now > self.last_traded_time + 10 and not self.buying_btcusdt:
                         qty = round(self.QTY * 2, 5) if self.selling_btcusdt else self.QTY
                         margin_send_market_buy_order("BTCUSDT", qty)
                         margin_send_market_sell_order("BTCBUSD", qty)
@@ -87,7 +87,7 @@ class Arbitrageur:
                         self.last_traded_time = now
 
                 elif selltime:
-                    if now > self.last_traded_time + 10 or not self.selling_btcusdt:
+                    if now > self.last_traded_time + 10 and not self.selling_btcusdt:
                         qty = round(self.QTY * 2, 5) if self.buying_btcusdt else self.QTY
                         margin_send_market_sell_order("BTCUSDT", qty)
                         margin_send_market_buy_order("BTCBUSD", qty)
