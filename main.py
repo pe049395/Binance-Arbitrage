@@ -2,7 +2,7 @@ import json
 import websocket
 from typing import List
 
-from arbitrage_trader import Arbitrager, BTCUSDT_LISTEN_KEY, BTCBUSD_LISTEN_KEY
+from arbitrage_trader import Arbitrageur, BTCUSDT_LISTEN_KEY, BTCBUSD_LISTEN_KEY
 
 
 class BinanceWebsocketConnector(Arbitrageur):
