@@ -39,7 +39,7 @@ class Arbitrageur:
 
 	self.last_traded_time = 0
 
-    def message_handler(self, message):
+    def handle_message(self, message):
         message = json.loads(message)
 
         if "e" not in message.keys():
