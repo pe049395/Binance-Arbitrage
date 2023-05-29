@@ -4,7 +4,6 @@ from typing import List
 
 from arbitrage_trader import Arbitrageur, BTCUSDT_LISTEN_KEY, BTCBUSD_LISTEN_KEY
 
-
 class BinanceWebsocketConnector(Arbitrageur):
     def __init__(self, symbols: List[str]):
         super().__init__()
@@ -39,14 +38,12 @@ class BinanceWebsocketConnector(Arbitrageur):
         print("WebSocket connection closed")
 
     def on_message(self, ws, message):
-        self.message_handler(message)
-
+        self.handle_message(message)
 
 def main():
     symbols = ["BTCUSDT", "BTCBUSD"]
     connector = BinanceWebsocketConnector(symbols)
     connector.ws.run_forever()
-
 
 if __name__ == "__main__":
     main()
