@@ -1,7 +1,6 @@
 import time
 import datetime
 import json
-import websocket
 
 from binance_client import client, margin_send_market_buy_order, margin_send_market_sell_order
 
